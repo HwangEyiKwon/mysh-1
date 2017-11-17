@@ -92,7 +92,7 @@ int evaluate_command(int n_commands, struct single_command (*commands)[512], cha
         fprintf(stderr, "%s: Invalid arguments\n", com->argv[0]);
         return -1;
       }
-    } else if(strchr(buf, '&')){
+    } else if(strchr(buf, '&')){	//it's about background, but I couldn't.
 	int pid;
 	char* token;
 	if(daemon(1,1) == -1){
