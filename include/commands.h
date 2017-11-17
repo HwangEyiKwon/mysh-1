@@ -7,7 +7,9 @@ struct single_command
   char** argv;
 };
 
-int evaluate_command(int n_commands, struct single_command (*commands)[512]);
+void process_creation(int n_commands, struct single_command (*commands)[512]);
+
+int evaluate_command(int n_commands, struct single_command (*commands)[512], char* buf);
 
 void free_commands(int n_commands, struct single_command (*commands)[512]);
 
